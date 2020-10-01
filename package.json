@@ -1,0 +1,32 @@
+{
+  "name": "interior-consultant",
+  "version": "1.0.0",
+  "description": "Interior Consultant Challenge",
+  "repository": "https://github.com/roninJosue/interior-consultant.git",
+  "author": "roninJosue",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "handlebars": "^4.7.6",
+    "handlebars-loader": "^1.7.1",
+    "html-loader": "^1.3.0",
+    "html-webpack-plugin": "^4.4.1",
+    "image-webpack-loader": "^7.0.1",
+    "mini-css-extract-plugin": "^0.11.2",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.2",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --content-base ./dist/ --config ./webpack/webpack.config.js -d",
+    "build": "webpack --config ./webpack/webpack.config.js -p"
+  }
+}

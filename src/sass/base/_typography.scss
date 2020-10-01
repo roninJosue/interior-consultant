@@ -1,0 +1,15 @@
+.heading-primary {
+    color: $color-white;
+    font-family: 'Lora', sans-serif;
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+.paragrahp{
+    font-size: $default-font-size;
+    color: $color-white;
+
+	&:not(:last-child){
+		margin-bottom: 3rem;
+	}
+}

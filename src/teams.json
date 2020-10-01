@@ -1,0 +1,36 @@
+{
+    "teams": [
+        {
+            "img": "./static/img/photo1.png",
+            "name": "Bill Mahoney",
+            "position": "product owner"
+        },
+        {
+            "img": "./static/img/photo2.png",
+            "name": "Saba Cabrera",
+            "position": "art director"
+        },
+        {
+            "img": "./static/img/photo3.png",
+            "name": "Shae Le",
+            "position": "teach lead"
+        }
+        ,
+        {
+            "img": "./static/img/photo4.png",
+            "name": "Skylah Lu",
+            "position": "ux designer"
+        },        
+        {
+            "img": "./static/img/photo5.png",
+            "name": "Griff Richards",
+            "position": "developer"
+        }
+        ,        
+        {
+            "img": "./static/img/photo6.png",
+            "name": "Stan Jhon",
+            "position": "developer"
+        }
+    ]
+}
