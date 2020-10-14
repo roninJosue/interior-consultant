@@ -1,4 +1,17 @@
 .interior {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
+    &__image {
+        width: 100%;
+    }
+
+    &__text {
+        flex-basis: 40%;
+    }
+
+    &__figure {
+        flex-basis: 50%;
+    }
 }

@@ -1,0 +1,29 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+
+    &__link {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+
+        &--active, &:hover {
+            font-weight: bold;
+        }
+    }
+}
