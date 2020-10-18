@@ -2,16 +2,78 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: $bg-color;
+
+    @include respond(phone) {
+        flex-wrap: wrap;
+        position: fixed;
+        z-index: 9999;
+        width: 90%;
+        top: 0;
+    }
+
+    $parent: &;
+    &__toggle {
+        display: none;
+
+        &:checked ~ #{$parent}__list {
+            display: flex;
+            justify-content: center;
+        }
+
+        &:checked ~ .logo {
+            visibility: hidden;
+        }
+
+        &:checked #{$parent} {
+            justify-content: flex-end;
+        }
+    }
+
+    &__icon {
+        &,
+		&::before,
+		&::after{
+			width: 3rem;
+			height: 2px;
+			background-color: $color-white;
+			display: inline-block;
+		}
+
+		&::before,
+		&::after{
+			content: "";
+			position: absolute;
+			left: 0;
+			transition: all .2s;
+		}
+
+		&::before{top: 2.3rem;}
+		&::after{top: 4.5rem;}
+    }
 
     &__list {
         flex: 1 0 auto;
         display: flex;
         justify-content: flex-end;
+
+        @include respond(phone) {
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            display: none;
+            height: 91vh;
+        }
+
     }
 
     &__item {
         &:not(:last-child) {
             margin-right: 5rem;
+            @include respond(phone) {
+                margin-right: 0;
+                margin-bottom: 5rem;
+            }
         }
     }
 
