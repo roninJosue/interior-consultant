@@ -3,13 +3,17 @@
     justify-content: space-between;
     align-items: center;
     background-color: $bg-color;
+    animation: moveInTop .8s ease-in;
+    transition: all .5s ease;
 
     @include respond(phone) {
         flex-wrap: wrap;
         position: fixed;
         z-index: 9999;
-        width: 90%;
+        width: 100%;
         top: 0;
+        left: 0;
+        padding: 1rem;
     }
 
     $parent: &;
@@ -19,14 +23,36 @@
         &:checked ~ #{$parent}__list {
             display: flex;
             justify-content: center;
+            opacity: 1;
+            margin-top: -10rem;
+
+            #{$parent}__item {
+                animation: item-scale-checked .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
         }
 
         &:checked ~ .logo {
             visibility: hidden;
         }
 
-        &:checked #{$parent} {
-            justify-content: flex-end;
+        &:checked {
+            /*justify-content: flex-end;*/
+            background-color: $bg-color;
+            padding: 90rem;
+        }
+
+        &:checked ~ .menu-icon #{$parent}__icon::before{
+            transform: rotate(135deg);
+            top: 3.3rem;
+        }
+
+        &:checked ~ .menu-icon #{$parent}__icon::after{
+            transform: rotate(-135deg);
+            top: 3.3rem;    
+        }
+
+        &:checked ~ .menu-icon #{$parent}__icon{
+            background-color: transparent;
         }
     }
 
@@ -34,7 +60,7 @@
         &,
 		&::before,
 		&::after{
-			width: 3rem;
+			width: 4rem;
 			height: 2px;
 			background-color: $color-white;
 			display: inline-block;
@@ -62,19 +88,28 @@
             width: 100%;
             text-align: center;
             display: none;
-            height: 91vh;
+            height: 100vh;
+            opacity: 0;
         }
 
     }
 
     &__item {
+        transition: all .5s ease;
+        //animation: item-scale;
+        //transform: scale(1.2);
         &:not(:last-child) {
             margin-right: 5rem;
             @include respond(phone) {
                 margin-right: 0;
-                margin-bottom: 5rem;
+                margin-bottom: 10rem;
             }
         }
+
+        @include respond(phone) {
+            transform: scale(3);
+        }
+
     }
 
     &__link {

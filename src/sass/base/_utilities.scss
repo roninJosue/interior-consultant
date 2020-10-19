@@ -22,49 +22,6 @@
     }
   }
   
-  .group {
-    display: flex;
-    align-items: center;
-  
-    @include respond(phone){
-      flex-direction: column;
-    }
-  }
-  
-  .h2 {
-    color: #fa5652;
-    font-weight: bold;
-    font-family: 'RedHatDisplay', sans-serif;
-    font-size: 2.5rem;
-  
-    @include respond(phone){
-      text-align: center;
-    }
-  
-    &--size-2 {
-      font-size: 2.8rem;
-    }
-  
-    &--greater {
-      font-size: 5rem;
-      text-transform: capitalize;
-    }
-  
-    &--medium {
-      font-size: 4rem;
-      text-transform: capitalize;
-    }
-  
-    &--medium-2 {
-      font-size: 4.5rem;
-      text-transform: capitalize;
-    }
-  
-    &--color-2 {
-      color: $color-text-primary;
-    }
-  }
-  
   .paragraph {
     width: 70%;
     font-size: 1.7rem;

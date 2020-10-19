@@ -15,6 +15,7 @@
     }
 
     &__text {
+        animation: moveInLeft .8s ease-in;
         flex-basis: 30%;
 
         &-paragrahp {
@@ -32,6 +33,7 @@
     }
 
     &__figure {
+        animation: moveInRight .8s ease-in;
         flex-basis: 55%;
         position: relative;
         margin-bottom: 10rem;
@@ -52,6 +54,7 @@
         top: 85%;
         padding: 2rem 3rem;
         color: $color-white;
+        animation: moveInBottom .8s ease-in;
 
         @include respond(phone) {
             width: auto;
